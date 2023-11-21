@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Blog Blog</title>
+    <link rel="stylesheet" href="addBlog.css">
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+
+        
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/Signup">DashBoard</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+
+        <section class="blog-post-form">
+            <h2>Create New Blog Post</h2>
+            <form id="blogPostForm">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div>
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" required></textarea>
+                </div>
+                <button type="submit">Create Blog Post</button>
+            </form>
+        </section>
+
+        <section class="blog-post-list">
+            <h2>Blog Posts</h2>
+            <ul id="blogPostList">
+                <!-- Blog posts will be dynamically added here -->
+            </ul>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
+
+    <script src="/addBlog.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog | <%= title %> </title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+        
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/Signup">DashBoard</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/addblog">Add Your Own Blog</a></li>
+            
+        </ul>
+    </nav>
+    
+    <main>
+        <% 
+        // Set a value in a JavaScript variable
+        let myVariable = JSON.stringify(title) 
+    %>
+
+    <input type="text" id="myInput" style="display: none;" value='<%= myVariable %>'>
+    
+
+        <div id="blog-container">
+          
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Blog</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
+    <script src="blog.js"></script>
+    <script>
+         var inputValue = document.getElementById('myInput').value;
+         localStorage.setItem("config" , inputValue)
+    </script>
+
+</body>
+
+</html>

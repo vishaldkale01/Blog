@@ -1,0 +1,42 @@
+<!-- template.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... Your other head content ... -->
+</head>
+<body>
+    <div class="container">
+        <h1>GraphQL Test</h1>
+
+        <!-- Query All Todos Section -->
+        <section>
+            <h2>Query All Todos</h2>
+            <!-- ... Query section as before ... -->
+        </section>
+
+        <!-- Display Users in a Table -->
+        <section>
+            <h2>All Users</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Created At</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                    <!-- User data will be displayed here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Button to Create User Table -->
+        <button id="fetchAndLogUsers">Fetch and Log Users</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/getAllUser.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!-- template.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraphQL Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
+ 
+</head>
+<body>
+
+    
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/addblog">Add Your Own Blog</a></li>
+            </ul>
+</nav>
+
+        <!-- Create New User Section -->
+        <section>
+            <h2>Create New User</h2>
+            <form id="userForm">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                <br>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                <br>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+                <br>
+                <button type="submit">Create User</button>
+                <br>
+
+                <div>
+                    <label>Fields to Retrieve:</label> <br> <br>
+                    <label><input type="checkbox" name="fields" value="id"> ID</label>
+                    <label><input type="checkbox" name="fields" value="name"> Name</label>
+                    <label><input type="checkbox" name="fields" value="email"> Email</label>
+                    <label><input type="checkbox" name="fields" value="password"> password</label>
+                </div>
+                <br>
+                <button id="getUserBtn" type="button" onclick="fetchAndLogUsers()">All User</button>
+            </form>
+            
+            <pre id="createUserResult" class="hide"></pre>
+            <!-- <pre id="createUserResult"></pre> -->
+           
+            </section>
+
+            <section>
+                <h2>Get User by ID</h2>
+                <form id="getUserByIdForm">
+                    <div>
+                        <label for="userId">User ID:</label>
+                        <input type="text" id="userId" name="userId" placeholder="User ID" required>
+                    </div>
+                    <br>
+                    <button type="submit">Get User by ID</button>
+                </form>
+                <pre id="getUserByIdResult" class="hide"></pre>
+            </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
+
+    <script src="/script.js"></script>
+    <script src="/getAllUser.js"></script>
+    <script src="/singleUser.js"></script>
+  
+
+
+    
+</body>
+</html>

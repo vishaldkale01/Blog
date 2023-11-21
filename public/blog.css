@@ -1,0 +1,111 @@
+/* Reset some default browser styles */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Style the navigation menu */
+nav ul {
+    background-color: #444;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Style blog post sections */
+.blog-post {
+    background-color: #f9f9f9;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.blog-post .date {
+    font-style: italic;
+    color: #777;
+    margin-right: 10px;
+}
+
+.blog-post .author {
+    font-weight: bold;
+    color: #444;
+}
+
+/* Style featured post */
+.featured-post {
+    background-color: #ffdb4d;
+    border: 1px solid #ffcc00;
+    padding: 30px;
+    text-align: center;
+}
+
+.featured-post h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Style content and sidebar */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blog-post {
+    flex-basis: calc(66.666% - 20px); /* Two-thirds width */
+}
+
+.sidebar {
+    flex-basis: calc(33.333% - 20px); /* One-third width */
+    background-color: #eee;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+/* Style footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+/* Style "Read more" links */
+a {
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
